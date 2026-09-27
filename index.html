@@ -22,14 +22,14 @@
         <a href="#experience">Experience</a>
         <a href="#leadership">Leadership</a>
         <a href="#gallery">Gallery</a>
-        <details class="nav-more">
-          <summary>More</summary>
-          <div class="nav-more-menu">
-            <a href="#awards">Awards & Recognition</a>
-            <a href="#skills">Skills</a>
-            <a href="#music">Music</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">More <span aria-hidden="true">⌄</span></button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a role="menuitem" href="#awards">Awards & Recognition</a>
+            <a role="menuitem" href="#skills">Skills</a>
+            <a role="menuitem" href="#music">Music</a>
           </div>
-        </details>
+        </div>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -163,12 +163,18 @@
           <a class="text-link light-link" href="https://github.com/Ishrak-Anan?tab=repositories" target="_blank" rel="noreferrer">View all repositories →</a>
         </div>
         <div class="project-grid">
-          <article class="project-card project-feature reveal">
-            <p class="meta">Undergraduate Thesis · LEO NTN</p>
-            <h3>Multi-Criteria Handover Optimization</h3>
-            <p>Evaluated handover strategies for dense Low Earth Orbit non-terrestrial networks using real Starlink TLE data, Python, and Skyfield, with emphasis on the trade-off between connection stability and link quality.</p>
-            <div class="tag-row"><span>Python</span><span>Skyfield</span><span>LEO NTN</span><span>Research</span></div>
-            <a href="https://github.com/Ishrak-Anan/Undergraduate-Thesis-LEO-NTN-Handover-Optimization" target="_blank" rel="noreferrer">Explore thesis →</a>
+          <article class="project-card project-feature project-feature-with-photo reveal">
+            <div class="project-feature-copy">
+              <p class="meta">Undergraduate Thesis · LEO NTN</p>
+              <h3>Multi-Criteria Handover Optimization</h3>
+              <p>Evaluated handover strategies for dense Low Earth Orbit non-terrestrial networks using real Starlink TLE data, Python, and Skyfield, with emphasis on the trade-off between connection stability and link quality.</p>
+              <div class="tag-row"><span>Python</span><span>Skyfield</span><span>LEO NTN</span><span>Research</span></div>
+              <a href="https://github.com/Ishrak-Anan/Undergraduate-Thesis-LEO-NTN-Handover-Optimization" target="_blank" rel="noreferrer">Explore thesis →</a>
+            </div>
+            <figure class="project-feature-photo">
+              <img src="assets/gallery/academic/thesis-book.jpg" alt="Ishrak Anan holding his undergraduate thesis book at the Islamic University of Technology" loading="lazy" />
+              <figcaption>Undergraduate thesis · September 2026</figcaption>
+            </figure>
           </article>
           <article class="project-card reveal">
             <p class="meta">Embedded Systems</p>
@@ -321,13 +327,22 @@
           <div class="award-group reveal">
             <h3>Scholarships & Academic Recognition</h3>
             <article class="award-item"><div><strong>OIC Scholarship</strong><span>Islamic University of Technology · 2022–2026</span><p>Awarded based on admission-test merit. Covered approximately 75% of the total undergraduate study cost, including tuition and residential expenses.</p></div></article>
-            <article class="award-item"><div><strong>SSC Examination 2019 Merit Scholarship</strong><span>Board of Intermediate and Secondary Education, Dhaka</span><p>General Category scholarship awarded on the basis of SSC academic performance.</p></div><a href="assets/certificates/ssc-merit-scholarship.pdf" target="_blank" rel="noreferrer">View document ↗</a></article>
-            <article class="award-item"><div><strong>Krishibid Institution Bangladesh — Merit Scholarship</strong><span>2023</span><p>Awarded in recognition of academic achievement.</p></div><a href="assets/certificates/kib-merit-scholarship.pdf" target="_blank" rel="noreferrer">View document ↗</a></article>
+            <article class="award-feature-item">
+              <img src="assets/gallery/academic/meritorious-student-award.jpg" alt="Meritorious Student Award recognition at Officers' Club Dhaka" loading="lazy" />
+              <div>
+                <strong>Meritorious Student Award</strong>
+                <span>Officers’ Club Dhaka · 2022</span>
+                <p>Recognized for academic excellence based on my Higher Secondary Certificate (HSC) result.</p>
+                <a href="assets/documents/awards/meritorious-student-award.pdf" target="_blank" rel="noreferrer">View document ↗</a>
+              </div>
+            </article>
+            <article class="award-item"><div><strong>SSC Examination 2019 Merit Scholarship</strong><span>Board of Intermediate and Secondary Education, Dhaka</span><p>General Category scholarship awarded on the basis of SSC academic performance.</p></div><a href="assets/documents/awards/ssc-merit-scholarship.pdf" target="_blank" rel="noreferrer">View document ↗</a></article>
+            <article class="award-item"><div><strong>Krishibid Institution Bangladesh — Merit Scholarship</strong><span>2023</span><p>Awarded in recognition of academic achievement.</p></div><a href="assets/documents/awards/krishibid-merit-scholarship.pdf" target="_blank" rel="noreferrer">View document ↗</a></article>
           </div>
           <div class="award-group reveal">
             <h3>Leadership & Competition Recognition</h3>
             <article class="award-item"><div><strong>Lifetime Membership</strong><span>Notre Dame Cultural Club · 2022</span><p>Awarded in recognition of sustained contribution and leadership within the club.</p></div></article>
-            <article class="award-item"><div><strong>Champion — Climate Justice Idea Competition</strong><span>The Daily Star × ActionAid</span></div><a href="assets/certificates/climate-justice-champion.pdf" target="_blank" rel="noreferrer">Certificate ↗</a></article>
+            <article class="award-item"><div><strong>Champion — Climate Justice Idea Competition</strong><span>The Daily Star × ActionAid</span></div><a href="assets/certificates/climate-justice-champion.pdf" target="_blank" rel="noreferrer">View certificate ↗</a></article>
             <article class="award-item"><div><strong>2nd Runner-Up — SHESTEM Presents EngiBiz</strong><span>MIST Career Club</span></div></article>
           </div>
         </div>
@@ -372,7 +387,7 @@
           <a class="btn btn-primary" href="https://www.youtube.com/@ishrakanan21" target="_blank" rel="noreferrer">Visit my YouTube channel ↗</a>
         </div>
         <figure class="music-photo reveal">
-          <img src="assets/gallery/music.jpg" alt="Ishrak Anan performing music" loading="lazy" />
+          <img src="assets/gallery/creative/music-3.jpg" alt="Ishrak Anan performing music" loading="lazy" />
           <figcaption>Guitar, vocals, and covers — a creative space outside engineering.</figcaption>
         </figure>
       </div>
@@ -383,32 +398,38 @@
         <div class="section-head reveal">
           <div>
             <p class="section-kicker">Featured Gallery</p>
-            <h2>People, places, projects, and moments.</h2>
+            <h2>People, places, experiences, and moments.</h2>
           </div>
-          <p class="gallery-note">A curated preview. Choose a category to explore the growing archive.</p>
+          <p class="gallery-note">A curated preview. Choose a category to explore the fuller archive.</p>
         </div>
         <div class="gallery-filters reveal" aria-label="Gallery categories">
           <a class="filter-btn active" href="gallery.html">All</a>
           <a class="filter-btn" href="gallery.html?category=leadership">Leadership & Organizations</a>
-          <a class="filter-btn" href="gallery.html?category=corporate">Corporate & Experience</a>
-          <a class="filter-btn" href="gallery.html?category=competition">Competitions & Achievements</a>
-          <a class="filter-btn" href="gallery.html?category=events">Events & Campus Life</a>
+          <a class="filter-btn" href="gallery.html?category=corporate">Corporate & Industrial Exposure</a>
+          <a class="filter-btn" href="gallery.html?category=competition">Competitions & Recognition</a>
+          <a class="filter-btn" href="gallery.html?category=academic">Academic & Campus Journey</a>
+          <a class="filter-btn" href="gallery.html?category=initiative">Entrepreneurship & Events</a>
           <a class="filter-btn" href="gallery.html?category=creative">Music & Creative</a>
           <a class="filter-btn" href="gallery.html?category=sports">Sports</a>
         </div>
-        <div class="gallery-grid">
-          <figure class="gallery-item reveal" data-category="leadership"><button class="gallery-open" data-full="assets/gallery/ielc.jpg" data-caption="Ideal English Language Club"><img src="assets/gallery/ielc.jpg" alt="Ideal English Language Club" loading="lazy" /></button><figcaption>Ideal English Language Club</figcaption></figure>
-          <figure class="gallery-item reveal" data-category="leadership"><button class="gallery-open" data-full="assets/gallery/ndcc-lifetime.jpg" data-caption="Notre Dame Cultural Club — Lifetime Membership"><img src="assets/gallery/ndcc-lifetime.jpg" alt="Notre Dame Cultural Club Lifetime Membership" loading="lazy" /></button><figcaption>Notre Dame Cultural Club</figcaption></figure>
-          <figure class="gallery-item reveal" data-category="leadership"><button class="gallery-open" data-full="assets/gallery/iutcbs-career-expo.jpg" data-caption="IUTCBS — Career Expo"><img src="assets/gallery/iutcbs-career-expo.jpg" alt="IUTCBS Career Expo" loading="lazy" /></button><figcaption>IUTCBS · Career Expo</figcaption></figure>
-          <figure class="gallery-item reveal" data-category="leadership"><button class="gallery-open" data-full="assets/gallery/iutcbs-biznation.jpg" data-caption="IUTCBS — BizNation"><img src="assets/gallery/iutcbs-biznation.jpg" alt="IUTCBS BizNation" loading="lazy" /></button><figcaption>IUTCBS · BizNation</figcaption></figure>
-          <figure class="gallery-item reveal" data-category="corporate"><button class="gallery-open" data-full="assets/gallery/grameenphone.jpg" data-caption="Grameenphone Campus Lead"><img src="assets/gallery/grameenphone.jpg" alt="Grameenphone Campus Lead activity" loading="lazy" /></button><figcaption>Grameenphone Campus Lead</figcaption></figure>
-          <figure class="gallery-item reveal" data-category="corporate"><button class="gallery-open" data-full="assets/gallery/futuremakers.jpg" data-caption="Grameenphone FutureMakers"><img src="assets/gallery/futuremakers.jpg" alt="FutureMakers event" loading="lazy" /></button><figcaption>FutureMakers</figcaption></figure>
-          <figure class="gallery-item reveal" data-category="leadership"><button class="gallery-open" data-full="assets/gallery/ieee.jpg" data-caption="IEEE IUT Student Branch"><img src="assets/gallery/ieee.jpg" alt="IEEE IUT Student Branch event" loading="lazy" /></button><figcaption>IEEE IUT Student Branch</figcaption></figure>
-          <figure class="gallery-item reveal" data-category="competition"><button class="gallery-open" data-full="assets/gallery/climate-justice.jpg" data-caption="Climate Justice Idea Competition"><img src="assets/gallery/climate-justice.jpg" alt="Climate Justice Idea Competition" loading="lazy" /></button><figcaption>Climate Justice · Champion</figcaption></figure>
-          <figure class="gallery-item reveal" data-category="competition"><button class="gallery-open" data-full="assets/gallery/engibiz.jpg" data-caption="EngiBiz"><img src="assets/gallery/engibiz.jpg" alt="EngiBiz business competition" loading="lazy" /></button><figcaption>EngiBiz · 2nd Runner-Up</figcaption></figure>
-          <figure class="gallery-item reveal" data-category="creative"><button class="gallery-open" data-full="assets/gallery/rock-mania.jpg" data-caption="Summer Rock Mania"><img src="assets/gallery/rock-mania.jpg" alt="Summer Rock Mania" loading="lazy" /></button><figcaption>Summer Rock Mania</figcaption></figure>
-          <figure class="gallery-item reveal" data-category="creative"><button class="gallery-open" data-full="assets/gallery/boys-garage.jpg" data-caption="The Boys' Garage"><img src="assets/gallery/boys-garage.jpg" alt="The Boys Garage food startup" loading="lazy" /></button><figcaption>The Boys’ Garage</figcaption></figure>
-          <figure class="gallery-item reveal" data-category="sports"><button class="gallery-open" data-full="assets/gallery/cricket.jpg" data-caption="IUT EEE Cricket Team"><img src="assets/gallery/cricket.jpg" alt="IUT EEE Cricket Team" loading="lazy" /></button><figcaption>IUT EEE Cricket Team</figcaption></figure>
+        <div class="gallery-grid featured-gallery-grid">
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/leadership/ndcc-5.jpg" data-caption="Notre Dame Cultural Club"><img src="assets/gallery/leadership/ndcc-5.jpg" alt="Notre Dame Cultural Club event" loading="lazy" /></button><figcaption>Notre Dame Cultural Club</figcaption></figure>
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/leadership/biznation-2026-1.jpg" data-caption="IUTCBS · BizNation"><img src="assets/gallery/leadership/biznation-2026-1.jpg" alt="IUTCBS BizNation" loading="lazy" /></button><figcaption>IUTCBS · BizNation</figcaption></figure>
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/leadership/career-expo-2026-1.jpg" data-caption="IUTCBS · Career Expo"><img src="assets/gallery/leadership/career-expo-2026-1.jpg" alt="IUTCBS Career Expo" loading="lazy" /></button><figcaption>IUTCBS · Career Expo</figcaption></figure>
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/leadership/ieee-2.jpg" data-caption="IEEE IUT Student Branch"><img src="assets/gallery/leadership/ieee-2.jpg" alt="IEEE IUT Student Branch" loading="lazy" /></button><figcaption>IEEE IUT Student Branch</figcaption></figure>
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/corporate/grameenphone-2.jpg" data-caption="Grameenphone Campus Lead"><img src="assets/gallery/corporate/grameenphone-2.jpg" alt="Grameenphone Campus Lead" loading="lazy" /></button><figcaption>Grameenphone Campus Lead</figcaption></figure>
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/corporate/futuremakers-4.jpg" data-caption="FutureMakers"><img src="assets/gallery/corporate/futuremakers-4.jpg" alt="Grameenphone FutureMakers" loading="lazy" /></button><figcaption>FutureMakers</figcaption></figure>
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/corporate/walton-1.jpeg" data-caption="Walton Hi-Tech Industries"><img src="assets/gallery/corporate/walton-1.jpeg" alt="Walton Hi-Tech Industries industrial visit" loading="lazy" /></button><figcaption>Walton Hi-Tech Industries</figcaption></figure>
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/corporate/ghorashal-2.jpeg" data-caption="Ghorashal Power Plant"><img src="assets/gallery/corporate/ghorashal-2.jpeg" alt="Ghorashal Power Plant industrial attachment" loading="lazy" /></button><figcaption>Ghorashal Power Plant</figcaption></figure>
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/corporate/baec-1.jpeg" data-caption="Bangladesh Atomic Energy Commission"><img src="assets/gallery/corporate/baec-1.jpeg" alt="Bangladesh Atomic Energy Commission training" loading="lazy" /></button><figcaption>BAEC</figcaption></figure>
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/corporate/robi-3.jpeg" data-caption="Robi Axiata PLC"><img src="assets/gallery/corporate/robi-3.jpeg" alt="Robi Axiata industry exposure" loading="lazy" /></button><figcaption>Robi Axiata</figcaption></figure>
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/competition/climate-justice-featured.jpg" data-caption="Climate Justice Idea Competition · Champion"><img src="assets/gallery/competition/climate-justice-featured.jpg" alt="Climate Justice Idea Competition champion team" loading="lazy" /></button><figcaption>Climate Justice · Champion</figcaption></figure>
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/competition/engibiz-featured.jpg" data-caption="EngiBiz · 2nd Runner-Up"><img src="assets/gallery/competition/engibiz-featured.jpg" alt="EngiBiz competition 2nd runner-up team" loading="lazy" /></button><figcaption>EngiBiz · 2nd Runner-Up</figcaption></figure>
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/academic/thesis-book.jpg" data-caption="Undergraduate Thesis · Islamic University of Technology"><img src="assets/gallery/academic/thesis-book.jpg" alt="Ishrak Anan with his undergraduate thesis book" loading="lazy" /></button><figcaption>Undergraduate Thesis</figcaption></figure>
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/initiative/summer-rock-mania-banner.jpg" data-caption="Summer Rock Mania"><img src="assets/gallery/initiative/summer-rock-mania-banner.jpg" alt="Summer Rock Mania event banner" loading="lazy" /></button><figcaption>Summer Rock Mania</figcaption></figure>
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/initiative/boys-garage-1.jpg" data-caption="The Boys’ Garage"><img src="assets/gallery/initiative/boys-garage-1.jpg" alt="The Boys Garage food startup" loading="lazy" /></button><figcaption>The Boys’ Garage</figcaption></figure>
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/creative/music-3.jpg" data-caption="Music & Performances"><img src="assets/gallery/creative/music-3.jpg" alt="Ishrak Anan performing music" loading="lazy" /></button><figcaption>Music & Performances</figcaption></figure>
+          <figure class="gallery-item reveal"><button class="gallery-open" data-full="assets/gallery/sports/iut-eee-cricket-featured.jpg" data-caption="IUT EEE Cricket Team"><img src="assets/gallery/sports/iut-eee-cricket-featured.jpg" alt="IUT EEE Cricket Team" loading="lazy" /></button><figcaption>IUT EEE Cricket Team</figcaption></figure>
         </div>
         <div class="gallery-cta reveal">
           <a class="btn btn-secondary" href="gallery.html">Open full gallery →</a>
@@ -437,7 +458,7 @@
   <footer>
     <div class="container footer-inner">
       <span>© <span id="year"></span> Ishrak Anan</span>
-      <a href="#top">Back to top ↑</a>
+      <a href="#home" class="back-to-top">Back to top ↑</a>
     </div>
   </footer>
 

@@ -1,6 +1,8 @@
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 const header = document.querySelector('.site-header');
+const dropdown = document.querySelector('.nav-dropdown');
+const dropdownButton = document.querySelector('.nav-dropdown-toggle');
 
 if (menuButton && nav) {
   menuButton.addEventListener('click', () => {
@@ -10,14 +12,31 @@ if (menuButton && nav) {
   nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
     nav.classList.remove('open');
     menuButton.setAttribute('aria-expanded', 'false');
+    dropdown?.classList.remove('open');
+    dropdownButton?.setAttribute('aria-expanded', 'false');
   }));
+}
+
+if (dropdown && dropdownButton) {
+  dropdownButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const open = dropdown.classList.toggle('open');
+    dropdownButton.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('click', (event) => {
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.remove('open');
+      dropdownButton.setAttribute('aria-expanded', 'false');
+    }
+  });
 }
 
 window.addEventListener('scroll', () => {
   header?.classList.toggle('scrolled', window.scrollY > 8);
 });
 
-document.getElementById('year').textContent = new Date().getFullYear();
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -30,7 +49,7 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-const filterButtons = document.querySelectorAll('.filter-btn');
+const filterButtons = document.querySelectorAll('.filter-btn[data-filter]');
 const galleryItems = document.querySelectorAll('.gallery-item');
 filterButtons.forEach((button) => {
   button.addEventListener('click', () => {
@@ -38,10 +57,18 @@ filterButtons.forEach((button) => {
     button.classList.add('active');
     const filter = button.dataset.filter;
     galleryItems.forEach((item) => {
-      item.classList.toggle('is-hidden', filter !== 'all' && item.dataset.category !== filter);
+      const categories = (item.dataset.category || '').split(/\s+/);
+      item.classList.toggle('is-hidden', filter !== 'all' && !categories.includes(filter));
     });
   });
 });
+
+const params = new URLSearchParams(window.location.search);
+const requestedCategory = params.get('category');
+if (requestedCategory && filterButtons.length) {
+  const requestedButton = Array.from(filterButtons).find((button) => button.dataset.filter === requestedCategory);
+  requestedButton?.click();
+}
 
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = lightbox?.querySelector('img');
@@ -71,6 +98,18 @@ lightboxClose?.addEventListener('click', closeLightbox);
 lightbox?.addEventListener('click', (event) => {
   if (event.target === lightbox) closeLightbox();
 });
+
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') closeLightbox();
+  if (event.key === 'Escape') {
+    closeLightbox();
+    dropdown?.classList.remove('open');
+    dropdownButton?.setAttribute('aria-expanded', 'false');
+  }
+});
+
+document.querySelectorAll('.back-to-top').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 });

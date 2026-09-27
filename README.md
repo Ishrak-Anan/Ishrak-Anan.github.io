@@ -1,5 +1,23 @@
 # Ishrak Anan — Personal Portfolio
 
-Personal website for Ishrak Anan, hosted with GitHub Pages.
+Version 3 of the personal portfolio website for Ishrak Anan.
 
-This is the first portfolio build. The site will be expanded with dedicated pages for academics, projects, experience, leadership & ECA, awards, certificates, music, gallery, skills, and contact.
+## What this version includes
+
+- Professional homepage and portrait
+- About Me narrative and journey timeline
+- Detailed academic history
+- Selected projects and undergraduate research
+- Grameenphone Campus Lead experience
+- Industrial and technical exposure
+- Leadership and extracurricular activities
+- Entrepreneurship, events, and sports
+- Awards and scholarship recognition
+- Technical and professional skills
+- Music / YouTube section
+- Filterable image gallery with lightbox
+- Contact links and downloadable CV
+
+## Deployment
+
+This is a static HTML/CSS/JavaScript website designed for GitHub Pages. Upload the **contents of this folder** to the root of `Ishrak-Anan/Ishrak-Anan.github.io`.
